@@ -5,30 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ПравоБлаго</title>
     <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li>Головна</li>
-          <li>Cфери діяльності</li>
-          <li>Про нас</li>
-          <li>Послуги</li>
-          <li>Відгуки</li>
-          <li>Контакти</li>
-        </ul>
-      </nav>
-    </header>
     <main>
+      <div class="brand-bar">
+        <span>ПравоБлаго</span>
+      </div>
+      <!-- Бургер-кнопка -->
+      <div class="burger" id="burger">☰</div>
+
+      <!-- Розмитий фон -->
+      <div class="overlay" id="overlay"></div>
+      <aside class="sidebar" id="sidebar">
+        <div class="close-btn" id="closeBtn">×</div>
+        <nav class="nav">
+          <ul>
+            <li><a class="active" href="#">Головна</a></li>
+            <li><a href="">Cфери діяльності</a></li>
+            <li><a href="">Про нас</a></li>
+            <li><a href="">Послуги</a></li>
+            <li><a href="">Відгуки</a></li>
+            <li><a href="">Контакти</a></li>
+          </ul>
+        </nav>
+      </aside>
       <section class="hero">
-        <h1>Юридина допомога в різних галузях права</h1>
-        <div>
-          <a href="">Наші послуги</a>
-          <p>Перша консультація безкоштовно</p>
+        <div class="hero__bg">
+          <picture>
+            <img src="./img/pexels-ekaterina-bolovtsova-6077326.jpg" />
+          </picture>
+        </div>
+        <div class="hero__cnt">
+          <h1>Юридина допомога в різних галузях права</h1>
+          <div>
+            <a class="button" href="">Наші послуги</a>
+            <p>Перша консультація безкоштовно</p>
+          </div>
         </div>
       </section>
       <section class="practice-areas">
@@ -292,5 +314,6 @@
       </section>
     </main>
     <footer></footer>
+    <script src="script.js"></script>
   </body>
 </html>

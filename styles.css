@@ -1,0 +1,262 @@
+/* Бургер */
+.burger {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 2em;
+  cursor: pointer;
+  z-index: 1001;
+  color: var(--color-text-light);
+}
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2em;
+  color: var(--color-text-light);
+  cursor: pointer;
+  z-index: 1003;
+}
+.brand-bar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 60px;
+  height: 100vh;
+  background-color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  text-orientation: mixed;
+  font-weight: 700;
+  font-size: 1em;
+  letter-spacing: 0.2em;
+  color: var(--color-accent);
+  z-index: 1000;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Sidebar початково прихований */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 75%;
+  max-width: 320px;
+  height: 100vh;
+  background: var(--color-bg-dark);
+  font-size: 0.65em;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-100%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1002;
+}
+
+/* Активна панель */
+.sidebar.active {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+/* Розмитий фон */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  backdrop-filter: blur(6px);
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+/* Активний фон */
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav {
+  position: relative;
+  margin: 0 15%;
+  text-align: right;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: bold;
+}
+.nav ul {
+  list-style: none;
+
+  li {
+    position: relative;
+    margin: 3.2em 0;
+
+    a {
+      line-height: 5em;
+      text-transform: uppercase;
+      letter-spacing: 0.4em;
+      color: var(--color-text-light);
+      display: block;
+      transition: all ease-out 300ms;
+    }
+    &.active a {
+      color: var(--color-hover-accent);
+    }
+    &:not(.active)::after {
+      opacity: 0.2;
+    }
+    &:not(.active):hover a {
+      color: var(--color-accent);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 0.2em;
+      background: black;
+      left: 0;
+      bottom: 0;
+      background-image: linear-gradient(to right, #5e42a6, #d4a760);
+    }
+  }
+}
+
+/* HERO SECTION */
+
+.hero {
+  display: grid;
+  position: relative;
+  grid-template-columns: 100vw;
+  grid-template-rows: 90vh;
+  place-items: center;
+  overflow: hidden;
+  animation: clip-hero-anim 1.25s cubic-bezier(0.29, 0.8, 0.8, 0.98);
+  will-change: clip-path;
+}
+
+.hero__bg,
+.hero__cnt {
+  align-self: center;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+.hero__bg {
+  display: grid;
+  position: relative;
+  z-index: 0;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  place-items: center;
+  animation: fade-in 0.75s linear;
+  will-change: opacity;
+}
+/* Gradient overlay */
+.hero__bg::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 5;
+  top: -10%;
+  right: -10%;
+  bottom: -10%;
+  left: -10%;
+  /* background: rgba(212, 167, 96, 0.1); */
+  background-blend-mode: screen;
+}
+
+/* Picture wrapper */
+.hero__bg picture {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  animation: scaling-hero-anim 4s 0.25s cubic-bezier(0, 0.71, 0.4, 0.97)
+    forwards;
+  will-change: transform;
+}
+
+/* Image */
+.hero__bg img {
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  height: auto;
+  width: 100%;
+}
+
+/* === Content === */
+.hero__cnt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  place-items: center;
+  z-index: 10;
+  color: var(--color-text-light);
+  font-size: 2.5vw;
+  text-transform: uppercase;
+  opacity: 0;
+  animation: fade-in 0.75s 1.5s linear forwards;
+}
+
+.hero__cnt h1 {
+  margin-bottom: 0;
+}
+
+.hero__cnt a.button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: var(--color-accent);
+  color: var(--color-text-light);
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.hero__cnt a.button:hover {
+  background-color: var(--color-hover-accent);
+}
+
+.hero__cnt p {
+  margin-top: 10px;
+  font-size: 1.2vw;
+  text-transform: none;
+  color: var(--color-accent);
+}
+
+/* === Animations === */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaling-hero-anim {
+  from {
+    transform: scale(1.25);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes clip-hero-anim {
+  from {
+    clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+  }
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}
