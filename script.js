@@ -17,3 +17,19 @@ closeBtn.addEventListener("click", () => {
   sidebar.classList.remove("active");
   overlay.classList.remove("active");
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  new Splide("#practice-slider", {
+    type: "loop",
+    perPage: 3,
+    gap: "2rem",
+    breakpoints: {
+      1024: { perPage: 2 },
+      640: { perPage: 1 },
+    },
+    autoplay: true,
+    pauseOnHover: true,
+    pagination: false,
+    arrows: true,
+  }).mount();
+});
