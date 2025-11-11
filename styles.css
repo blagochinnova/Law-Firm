@@ -1,18 +1,18 @@
 /* Reset and Base Styles */
- * {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 :root {
-  --gold: #d4af37;
-  --gold-dark: #b8941f;
-  --bg-dark: #0a0a0a;
-  --bg-darker: #000000;
+  --gold: #c7a46a;
+  --gold-dark: #a48753;
+  --bg-dark: #06322b;
+  --bg-darker: #02221d;
   --text-white: #ffffff;
-  --text-gray: #4a4a4a;
-  --text-light-gray: #d4d4d4;
+  --text-gray: #d8d8d8;
+  --text-light-gray: #f3f3f3;
   --border-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -21,7 +21,7 @@ html {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   background-color: var(--bg-dark);
   color: var(--text-white);
   line-height: 1.6;
@@ -34,10 +34,12 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-weight: 700;
 }
-
+a {
+  text-decoration: none;
+}
 .container {
   max-width: 1280px;
   margin: 0 auto;
@@ -55,7 +57,6 @@ h6 {
     padding: 0 2rem;
   }
 }
-
 
 /* Header */
 .header {
@@ -84,7 +85,7 @@ h6 {
   font-size: 1.5rem;
   font-weight: 700;
   cursor: pointer;
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
 }
 
 .logo-pravo {
@@ -212,7 +213,12 @@ h6 {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.85) 0%, rgba(10, 10, 10, 0.9) 50%, rgba(0, 0, 0, 0.85) 100%);
+  background: linear-gradient(
+    to bottom right,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(10, 10, 10, 0.9) 50%,
+    rgba(0, 0, 0, 0.85) 100%
+  );
 }
 
 .hero-decoration {
@@ -324,7 +330,11 @@ h6 {
   align-items: center;
   gap: 0.5rem;
   padding: 0.75rem 1.5rem;
-  background: linear-gradient(to right, rgba(212, 175, 55, 0.2) 0%, transparent 100%);
+  background: linear-gradient(
+    to right,
+    rgba(212, 175, 55, 0.2) 0%,
+    transparent 100%
+  );
   border-left: 4px solid var(--gold);
   border-radius: 0 9999px 9999px 0;
   margin-bottom: 2rem;
@@ -532,7 +542,11 @@ section {
 
 .service-card {
   padding: 2rem;
-  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
   backdrop-filter: blur(4px);
@@ -586,7 +600,12 @@ section {
 .additional-services {
   margin-top: 5rem;
   padding: 3rem;
-  background: linear-gradient(to bottom right, rgba(212, 175, 55, 0.1) 0%, transparent 50%, transparent 100%);
+  background: linear-gradient(
+    to bottom right,
+    rgba(212, 175, 55, 0.1) 0%,
+    transparent 50%,
+    transparent 100%
+  );
   border: 1px solid rgba(212, 175, 55, 0.2);
   border-radius: 16px;
   backdrop-filter: blur(4px);
@@ -670,7 +689,11 @@ section {
 }
 
 .team-card {
-  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
   overflow: hidden;
@@ -809,7 +832,11 @@ section {
 }
 
 .contact-form-wrapper {
-  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
   padding: 2rem;
@@ -848,7 +875,7 @@ section {
   border-radius: 8px;
   color: var(--text-white);
   font-size: 1rem;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   transition: border-color 0.2s;
 }
 
@@ -878,7 +905,11 @@ section {
   align-items: flex-start;
   gap: 1rem;
   padding: 1.5rem;
-  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
   backdrop-filter: blur(4px);
@@ -911,7 +942,7 @@ section {
   margin-bottom: 0.25rem;
 }
 
-.contact-info-card p {
+.contact-info-card a {
   color: #9ca3af;
   font-size: 0.875rem;
 }
@@ -1005,7 +1036,7 @@ section {
   flex-shrink: 0;
 }
 
-.footer-contact-item p {
+.footer-contact-item a {
   color: #9ca3af;
   font-size: 0.875rem;
 }
