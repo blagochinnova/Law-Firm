@@ -942,7 +942,8 @@ section {
   margin-bottom: 0.25rem;
 }
 
-.contact-info-card a {
+.contact-info-card a,
+.contact-info-card p {
   color: #9ca3af;
   font-size: 0.875rem;
 }
