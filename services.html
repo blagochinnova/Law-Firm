@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="uk">
-  <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Еволюція - Юридична компанія</title>
@@ -11,9 +11,9 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet">
   </head>
-  <body>
-
-      <!-- Header -->
+<body>
+    
+         <!-- Header -->
     <header class="header" id="header">
         <div class="container">
             <div class="header-content">
@@ -21,11 +21,9 @@
                     <span class="logo-pravo">Еволюція</span>
                 </div>
                 <nav class="nav-desktop">
-                    <button onclick="scrollToSection('hero')" class="nav-link">Головна</button>
-                    <button onclick="scrollToSection('services')" class="nav-link">Послуги</button>
+                    <a href="./index.html" class="nav-link nav-link-anchor">Головна</a>
                     <button onclick="scrollToSection('team')" class="nav-link">Команда</button>
                     <button onclick="scrollToSection('contact')" class="nav-link">Контакти</button>
-                    <a href="./services.html" class="nav-link nav-link">Для Бізнесу</a>
                     <button onclick="scrollToSection('contact')" class="btn btn-primary">Консультація</button>
                 </nav>
                 <button class="mobile-menu-btn" id="mobileMenuBtn">
@@ -35,209 +33,201 @@
                 </button>
             </div>
             <nav class="nav-mobile" id="navMobile">
-                <button onclick="scrollToSection('hero')" class="nav-link">Головна</button>
-                <button onclick="scrollToSection('services')" class="nav-link">Послуги</button>
+                <a href="./index.html" class="nav-link nav-link-anchor">Головна</a>
                 <button onclick="scrollToSection('team')" class="nav-link">Команда</button>
                 <button onclick="scrollToSection('contact')" class="nav-link">Контакти</button>
-                <a href="./services.html" class="nav-link nav-link">Для Бізнесу</a>
                 <button onclick="scrollToSection('contact')" class="btn btn-primary">Консультація</button>
             </nav>
         </div>
     </header>
-      <!-- Hero Section -->
-      <section class="hero" id="hero">
-        <div class="hero-bg">
-          <img src="https://images.unsplash.com/photo-1589578527966-fdac0f44566c?w=1920&q=80" alt="Justice"
-            class="hero-image">
-          <div class="hero-overlay"></div>
+
+<section class="business-support" id="business-support">
+  <div class="container">
+    <div class="section-heading">
+      <span class="section-label">Юридичний супровід бізнесу</span>
+      <h2>Комплексний юридичний супровід вашого бізнесу (LPO — Legal Process Outsourcing)</h2>
+      <p>Ми робимо право прозорим, а ваш бізнес — захищеним.</p>
+    </div>
+
+    <div class="service-block">
+      <div class="block-title">
+        <span>01</span>
+        <h3>Абонентське юридичне обслуговування</h3>
+      </div>
+
+      <div class="practice-grid">
+        <article class="practice-card">
+          <div class="practice-icon">✍️</div>
+          <h4>Договірна практика</h4>
+          <p>Гіг-контракти (для IT/Diia City), NDA, NCA, ЗЕД-контракти, договори позики та послуг.</p>
+        </article>
+
+        <article class="practice-card">
+          <div class="practice-icon">🏛️</div>
+          <h4>Корпоративне право</h4>
+          <p>Реєстрація та структурування бізнесу, супровід M&amp;A, корпоративні договори, ліквідація.</p>
+        </article>
+
+        <article class="practice-card">
+          <div class="practice-icon">📊</div>
+          <h4>Податки та перевірки</h4>
+          <p>Податкове планування, супровід перевірок ДПС, відкриття рахунків в Україні та за кордоном.</p>
+        </article>
+
+        <article class="practice-card">
+          <div class="practice-icon">🛡️</div>
+          <h4>Інтелектуальна власність</h4>
+          <p>Реєстрація ТМ, захист авторських прав, супровід спорів щодо ОІВ.</p>
+        </article>
+
+        <article class="practice-card">
+          <div class="practice-icon">👥</div>
+          <h4>HR та кадри</h4>
+          <p>Кадровий аудит, звільнення та прийняття працівників, робота з ФОП та гіг-фахівцями.</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="military-accounting">
+      <div class="military-content">
+        <span class="section-label light">02 Військовий облік на підприємстві</span>
+        <h3>Повна відповідність без штрафів</h3>
+        <p class="military-lead">
+          Штрафи сягають десятків тисяч гривень, а ТЦК вимагає ідеального ведення документації.
+        </p>
+
+        <ul class="military-list">
+          <li>Призначення відповідальної особи та її навчання</li>
+          <li>Формування журналів, списків та актуалізація даних</li>
+          <li>Супровід планових та позапланових перевірок ТЦК</li>
+          <li>Аутсорсинг військового обліку: ми ведемо вашу базу, ви уникаєте ризиків</li>
+        </ul>
+
+        <a href="#contact" class="btn-gold">Замовити консультацію</a>
+      </div>
+
+      <div class="military-visual">
+        <div class="visual-card">
+          <span>Військовий облік підприємства</span>
         </div>
-        <div class="hero-decoration hero-decoration-1"></div>
-        <div class="hero-decoration hero-decoration-2"></div>
-        <div class="container hero-container">
-          <div class="hero-badge">
-            <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M12 2L2 7l10 5 10-5-10-5z" />
-              <path d="M2 17l10 5 10-5" />
-              <path d="M2 12l10 5 10-5" />
-            </svg>
-            <span>Професійна юридична допомога</span>
+      </div>
+    </div>
+
+    <div class="service-block cooperation-block">
+      <div class="block-title">
+        <span>03</span>
+        <h3>Формати співпраці</h3>
+      </div>
+
+      <div class="cooperation-grid">
+        <article class="cooperation-card">
+          <div class="cooperation-icon">○</div>
+          <div>
+            <h4>Разова консультація</h4>
+            <p>Швидке вирішення конкретного правового питання.</p>
           </div>
-          <h1 class="hero-title">
-            <span class="hero-title-white">Юридична допомога в </span>
-            <span class="hero-title-gold">різних галузях права</span>
-          </h1>
-          <p class="hero-description">
-            Наша команда об'єднує досвідчених юристів-ветеранів, які щодня допомогають клієнтам захищати свої права з професіоналізмом і гідностю.
-          
-          </p>
-          <div class="hero-free-badge">
-            <!-- <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M6 9l6 6 6-6" />
-            </svg> -->
-            <span>Перша консультація безкоштовно</span>
+        </article>
+
+        <article class="cooperation-card featured">
+          <div class="cooperation-icon">★</div>
+          <div>
+            <h4>Абонентський пакет</h4>
+            <p>Щомісячна підтримка за фіксовану вартість (найкращий вибір для бізнесу).</p>
           </div>
-          <div class="hero-buttons">
-            <button onclick="scrollToSection('services')" class="btn btn-primary btn-lg">Наші послуги</button>
-            <button onclick="scrollToSection('contact')" class="btn btn-outline btn-lg">Зв'язатися з нами</button>
-          </div>
-          
-        </div>
-      </section>
-      <!-- Services Section -->
-      <section class="services" id="services">
-        <div class="section-decoration section-decoration-1"></div>
-        <div class="section-decoration section-decoration-2"></div>
-        <div class="container">
-          <div class="section-header">
-            <div class="section-badge">НАШІ ПОСЛУГИ</div>
-            <h2 class="section-title">
-              <span class="section-title-white">Наші </span>
-              <span class="section-title-gold">сфери діяльності</span>
-            </h2>
-            <p class="section-description">
-              Ми надаємо комплексні юридичні послуги в різних галузях права для захисту ваших інтересів
-            </p>
-          </div>
-          <div class="services-grid">
-            <div class="service-card">
-              <div class="service-icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-              </div>
-              <h3 class="service-title">Військове право</h3>
-              <p class="service-description">Захист прав військовослужбовців, мобілізованих та ветеранів.</p>
-            </div>
-            <div class="service-card">
-              <div class="service-icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M12 2L2 7l10 5 10-5-10-5z" />
-                  <path d="M2 17l10 5 10-5" />
-                  <path d="M2 12l10 5 10-5" />
-                </svg>
-              </div>
-              <h3 class="service-title">Цивільне право</h3>
-              <p class="service-description">Договори, майнові спори, захист прав споживачів.</p>
-            </div>
-            <div class="service-card">
-              <div class="service-icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                </svg>
-              </div>
-              <h3 class="service-title">Кримінальне право</h3>
-              <p class="service-description">Захист у кримінальних провадженнях на всіх етапах.</p>
-            </div>
-            <div class="service-card">
-              <div class="service-icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                  <polyline points="14 2 14 8 20 8" />
-                </svg>
-              </div>
-              <h3 class="service-title">Адміністративні правопорушення</h3>
-              <p class="service-description">Оскарження штрафів, супровід у держорганах.</p>
-            </div>
-            <div class="service-card">
-              <div class="service-icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <circle cx="12" cy="12" r="10" />
-                  <polyline points="12 6 12 12 16 14" />
-                </svg>
-              </div>
-              <h3 class="service-title">Представництво в судах</h3>
-              <p class="service-description">Юридичний супровід у судах усіх інстанцій.</p>
-            </div>
-            <div class="service-card">
-              <div class="service-icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
-                  <line x1="3" y1="9" x2="21" y2="9" />
-                </svg>
-              </div>
-              <h3 class="service-title">Виконавче провадження</h3>
-              <p class="service-description">Скасування арештів майна та оскарження постанов.</p>
-            </div>
-            <div class="service-card">
-              <div class="service-icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                  <circle cx="9" cy="7" r="4" />
-                  <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                </svg>
-              </div>
-              <h3 class="service-title">Сімейне та спадкове право</h3>
-              <p class="service-description">Поділ майна, спадкові питання, захист прав дітей.</p>
-            </div>
-            
-          </div>
-          <div class="additional-services">
-            <h3 class="additional-services-title">Додаткові послуги</h3>
-            <div class="additional-services-grid">
-              <div class="additional-services-list">
-                <div class="additional-service-item">
-                  <div class="bullet"></div>
-                  <p>Військовий адвокат</p>
-                </div>
-                <div class="additional-service-item">
-                  <div class="bullet"></div>
-                  <p>Мобілізація</p>
-                </div>
-                <div class="additional-service-item">
-                  <div class="bullet"></div>
-                  <p>СЗЧ, ТЦК, ВЛК</p>
-                </div>
-                <div class="additional-service-item">
-                  <div class="bullet"></div>
-                  <p>Виплати</p>
-                </div>
-                <div class="additional-service-item">
-                  <div class="bullet"></div>
-                  <p>Відстрочка</p>
-                </div>
-                <div class="additional-service-item">
-                  <div class="bullet"></div>
-                  <p>Допомога у забезпеченні прав військовослужбовців</p>
-                </div>
-              </div>
-              <div class="additional-services-list">
-                <div class="additional-service-item">
-                  <div class="bullet"></div>
-                  <p>Допомога у вирішенні спірних питань</p>
-                </div>
-                <div class="additional-service-item">
-                  <div class="bullet"></div>
-                  <p>Пенсійне право</p>
-                </div>
-                <div class="additional-service-item">
-                  <div class="bullet"></div>
-                  <p>Призначення пенсії військовослужбовцям</p>
-                </div>
-                <div class="additional-service-item">
-                  <div class="bullet"></div>
-                  <p>Допомога у стягненні компенсації за пошкодження/зруйноване майно внаслідок збройного конфлікту</p>
-                </div>
-                <div class="additional-service-item">
-                  <div class="bullet"></div>
-                  <p>Адвокат по кредитам</p>
-                </div>
-                <div class="additional-service-item">
-                  <div class="bullet"></div>
-                  <p>Виконання рішень суду</p>
-                </div>
-                <div class="additional-service-item">
-                  <div class="bullet"></div>
-                  <p>Робота з виконавчою службою</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      <!-- Team Section -->
+        </article>
+      </div>
+    </div>
+
+    <div class="retail-support">
+  <div class="block-title">
+    <span>04</span>
+    <h3>Юридичний супровід брендів та вихід у Retail</h3>
+  </div>
+
+  <div class="retail-top">
+    <div class="retail-intro">
+      <h4>Перетворюємо ваш продукт на захищений актив та надійного партнера для великих мереж.</h4>
+      <p>
+        Масштабування бренду та вихід у національні торговельні мережі вимагає не лише маркетингової
+        стратегії, а й міцного юридичного фундаменту. Ми забезпечуємо повний супровід виробників та
+        дистриб’юторів, мінімізуючи ризики при взаємодії з великим бізнесом та державними органами.
+      </p>
+    </div>
+
+    <div class="retail-grid">
+      <article class="retail-card">
+        <h5>⚖️ Retail-комплаєнс та договірна архітектура</h5>
+
+        <p class="retail-subtitle">Аналіз договорів із мережами:</p>
+        <ul class="retail-list">
+          <li>Детальна експертиза контрактів із національними ритейлерами</li>
+          <li>Коригування прихованих штрафних санкцій, умов дебіторської заборгованості, маркетингових ретро-бонусів та умов повернення товару</li>
+        </ul>
+
+        <p class="retail-subtitle">Побудова дистрибуції:</p>
+        <ul class="retail-list">
+          <li>Розробка дилерських та дистриб’юторських угод «з нуля»</li>
+          <li>Покриття всієї території України або вихід на міжнародні ринки</li>
+        </ul>
+      </article>
+
+      <article class="retail-card">
+        <h5>🛡️ Захист капіталу бренду (IP Law)</h5>
+        <ul class="retail-list">
+          <li>Реєстрація ТМ для лістингу в мережах та захисту від недобросовісної конкуренції</li>
+          <li>Антипіратство та юридичне блокування продажів підробленої чи «сірої» продукції</li>
+          <li>Захист промислових зразків та реєстрація унікального дизайну пакування чи форми виробу</li>
+        </ul>
+      </article>
+
+      <article class="retail-card">
+        <h5>📋 Compliance &amp; Технічне регулювання</h5>
+        <ul class="retail-list">
+          <li>Юридичний аудит пакування та маркування на відповідність технічним регламентам</li>
+          <li>Перевірка вимог щодо мови та прав споживачів</li>
+          <li>Супровід отримання сертифікатів, декларацій відповідності та гігієнічних висновків</li>
+        </ul>
+      </article>
+
+      <article class="retail-card">
+        <h5>📢 Marketing &amp; Media Law</h5>
+        <ul class="retail-list">
+          <li>Супровід рекламних кампаній та юридичний аналіз креативів</li>
+          <li>Уникнення штрафів за порушення Закону «Про рекламу»</li>
+          <li>Контракти з інфлюенсерами та амбасадорами бренду</li>
+          <li>Регулювання передачі прав на контент і відповідальності за репутаційні ризики</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+
+  <div class="retail-benefits">
+    <h4>Чому вашому бренду потрібен юридичний партнер?</h4>
+
+    <div class="benefits-grid">
+      <div class="benefit-item">
+        <h5>Професійна позиція в переговорах</h5>
+        <p>Наявність адвокатського супроводу змінює баланс сил при узгодженні умов із ритейлерами.</p>
+      </div>
+
+      <div class="benefit-item">
+        <h5>Захист маржинальності</h5>
+        <p>Ми прибираємо з договорів юридичні пастки, які призводять до неочікуваних фінансових втрат (штрафи, логістичні нарахування).</p>
+      </div>
+
+      <div class="benefit-item">
+        <h5>Легітимність масштабування</h5>
+        <p>Ваш бренд готовий до будь-яких перевірок — від податкової до захисту прав споживачів.</p>
+      </div>
+    </div>
+
+    <a href="#contact" class="btn-dark">Замовити Legal Audit</a>
+  </div>
+</div>
+  </div>
+</section>
+
+    <!-- Team Section -->
       <section class="team" id="team">
         <div class="section-decoration section-decoration-3"></div>
         <div class="container">
@@ -350,8 +340,7 @@
           </div>
         </div>
       </section>
-      
-      <!-- Contact Section -->
+    <!-- Contact Section -->
       <section class="contact" id="contact">
         <div class="section-decoration section-decoration-4"></div>
         <div class="section-decoration section-decoration-5"></div>
@@ -531,5 +520,6 @@
       <div id="toast" class="toast"></div>
       
       <script src="script.js"></script>
-  </body>
+    
+</body>
 </html>

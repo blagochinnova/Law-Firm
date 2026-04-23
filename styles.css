@@ -1109,3 +1109,525 @@ section {
 .icon {
   flex-shrink: 0;
 }
+
+
+/* BUSINESS SUPPORT - UNIFIED STYLE */
+
+.business-support {
+  position: relative;
+  padding: 6rem 0;
+  background:
+    radial-gradient(circle at top left, rgba(199, 164, 106, 0.08), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(199, 164, 106, 0.06), transparent 30%),
+    linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-darker) 100%);
+  color: var(--text-white);
+  overflow: hidden;
+}
+
+.business-support::before {
+  content: "";
+  position: absolute;
+  top: 120px;
+  left: -120px;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: rgba(199, 164, 106, 0.06);
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+.business-support::after {
+  content: "";
+  position: absolute;
+  bottom: 80px;
+  right: -100px;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: rgba(199, 164, 106, 0.05);
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+.business-support .container {
+  position: relative;
+  z-index: 2;
+}
+
+.section-heading {
+  max-width: 900px;
+  margin: 0 auto 4rem;
+  text-align: center;
+}
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  background-color: rgba(199, 164, 106, 0.1);
+  border: 1px solid rgba(199, 164, 106, 0.3);
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.section-label.light {
+  color: var(--gold);
+  border-color: rgba(199, 164, 106, 0.35);
+  background-color: rgba(199, 164, 106, 0.08);
+}
+
+.section-heading h2 {
+  margin: 0 0 1rem;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.2;
+  color: var(--text-white);
+}
+
+.section-heading p {
+  max-width: 720px;
+  margin: 0 auto;
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #cfcfcf;
+}
+
+.service-block {
+  margin-bottom: 5rem;
+}
+
+.block-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.block-title span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgba(199, 164, 106, 0.12);
+  border: 1px solid rgba(199, 164, 106, 0.22);
+  color: var(--gold);
+  font-size: 0.9rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.block-title h3 {
+  margin: 0;
+  font-size: clamp(1.6rem, 3vw, 2.3rem);
+  line-height: 1.25;
+  color: var(--text-white);
+}
+
+.practice-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+}
+
+.practice-card,
+.cooperation-card,
+.retail-card,
+.retail-benefits {
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
+}
+
+.practice-card:hover,
+.cooperation-card:hover,
+.retail-card:hover,
+.retail-benefits:hover {
+  border-color: rgba(199, 164, 106, 0.4);
+  box-shadow: 0 16px 40px rgba(199, 164, 106, 0.08);
+  transform: translateY(-4px);
+}
+
+.practice-card {
+  padding: 2rem 1.25rem;
+}
+
+.practice-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(199, 164, 106, 0.12);
+  color: var(--gold);
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.practice-card h4 {
+  margin: 0 0 0.75rem;
+  font-size: 1.25rem;
+  color: var(--text-white);
+  line-height: 1.35;
+}
+
+.practice-card p {
+  margin: 0;
+  color: #b8b8b8;
+  font-size: 0.95rem;
+  line-height: 1.75;
+}
+
+.military-accounting {
+  display: grid;
+  grid-template-columns: 1.2fr 0.9fr;
+  gap: 2rem;
+  margin: 5rem 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  border: 1px solid rgba(199, 164, 106, 0.15);
+  border-radius: 24px;
+  overflow: hidden;
+  backdrop-filter: blur(4px);
+}
+
+.military-content {
+  padding: 3.5rem 3rem;
+  color: var(--text-white);
+}
+
+.military-content h3 {
+  margin: 0 0 1rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.15;
+  color: var(--text-white);
+}
+
+.military-lead {
+  margin: 0 0 1.75rem;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #d2d2d2;
+}
+
+.military-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+}
+
+.military-list li {
+  position: relative;
+  padding-left: 1.8rem;
+  margin-bottom: 0.95rem;
+  color: #d8d8d8;
+  line-height: 1.75;
+}
+
+.military-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.military-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.45)),
+    radial-gradient(circle at top, rgba(199, 164, 106, 0.18), transparent 45%),
+    linear-gradient(180deg, #0c2b24 0%, #071d19 100%);
+}
+
+.visual-card {
+  width: 260px;
+  min-height: 330px;
+  padding: 2rem;
+  border-radius: 18px;
+  background: linear-gradient(145deg, #163730 0%, #0a231e 100%);
+  border: 1px solid rgba(199, 164, 106, 0.28);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.visual-card span {
+  font-size: 1.7rem;
+  line-height: 1.35;
+  font-weight: 600;
+  color: var(--gold);
+}
+
+.cooperation-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.cooperation-card {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1.75rem;
+}
+
+.cooperation-card.featured {
+  border-color: rgba(199, 164, 106, 0.35);
+  background: linear-gradient(
+    to bottom right,
+    rgba(199, 164, 106, 0.14) 0%,
+    rgba(255, 255, 255, 0.03) 100%
+  );
+}
+
+.cooperation-icon {
+  flex: 0 0 56px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(199, 164, 106, 0.12);
+  border: 1px solid rgba(199, 164, 106, 0.25);
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+
+.cooperation-card h4 {
+  margin: 0 0 0.5rem;
+  font-size: 1.35rem;
+  color: var(--text-white);
+}
+
+.cooperation-card p {
+  margin: 0;
+  color: #c3c3c3;
+  line-height: 1.75;
+}
+
+.retail-support {
+  margin-top: 5rem;
+}
+
+.retail-top {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 2rem;
+  align-items: start;
+  margin-top: 1.75rem;
+}
+
+.retail-intro {
+  padding-right: 0.5rem;
+}
+
+.retail-intro h4 {
+  margin: 0 0 1rem;
+  font-size: clamp(1.9rem, 4vw, 2.8rem);
+  line-height: 1.2;
+  color: var(--text-white);
+}
+
+.retail-intro p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.85;
+  color: #c8c8c8;
+}
+
+.retail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.retail-card {
+  padding: 1.6rem 1.25rem;
+}
+
+.retail-card h5 {
+  margin: 0 0 0.75rem;
+  font-size: 1.15rem;
+  line-height: 1.4;
+  color: var(--text-white);
+}
+
+.retail-card p {
+  margin: 0;
+  color: #bdbdbd;
+  line-height: 1.75;
+  font-size: 0.95rem;
+}
+
+.retail-benefits {
+  margin-top: 2rem;
+  padding: 2.25rem;
+}
+
+.retail-benefits h4 {
+  margin: 0 0 1.75rem;
+  font-size: 2rem;
+  text-align: center;
+  color: var(--text-white);
+}
+.retail-subtitle {
+  margin: 12px 0 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--gold);
+}
+
+.retail-list {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.retail-list li {
+  margin-bottom: 8px;
+  color: #c6c6c6;
+  line-height: 1.7;
+}
+
+.retail-list li:last-child {
+  margin-bottom: 0;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 1.8rem;
+}
+
+.benefit-item {
+  padding: 0.4rem;
+}
+
+.benefit-item h5 {
+  margin: 0 0 0.6rem;
+  font-size: 1.1rem;
+  color: var(--gold);
+}
+
+.benefit-item p {
+  margin: 0;
+  color: #c6c6c6;
+  line-height: 1.75;
+}
+
+.btn-gold,
+.btn-dark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 210px;
+  min-height: 54px;
+  padding: 0.9rem 1.75rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.25s ease;
+}
+
+.btn-gold {
+  background-color: var(--gold);
+  color: var(--bg-darker);
+}
+
+.btn-gold:hover {
+  background-color: var(--gold-dark);
+  transform: scale(1.03);
+}
+
+.btn-dark {
+  background: transparent;
+  color: var(--gold);
+  border: 2px solid var(--gold);
+  margin: 0 auto;
+  display: flex;
+  width: fit-content;
+}
+
+.btn-dark:hover {
+  background-color: var(--gold);
+  color: var(--bg-darker);
+  transform: scale(1.03);
+}
+
+@media (max-width: 1100px) {
+  .practice-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .retail-top,
+  .military-accounting,
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .business-support {
+    padding: 4.5rem 0;
+  }
+
+  .section-heading {
+    margin-bottom: 3rem;
+  }
+
+  .practice-grid,
+  .cooperation-grid,
+  .retail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .military-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .military-visual {
+    padding: 1.5rem;
+  }
+
+  .visual-card {
+    width: 100%;
+    min-height: 220px;
+  }
+
+  .retail-benefits {
+    padding: 1.5rem;
+  }
+
+  .block-title {
+    align-items: flex-start;
+  }
+
+  .block-title h3 {
+    line-height: 1.3;
+  }
+}

@@ -79,7 +79,7 @@ contactForm.addEventListener("submit", async (e) => {
   };
 
   try {
-    const response = await fetch("/api/send-telegram", {
+    const response = await fetch("/api/send-tlg.php", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
