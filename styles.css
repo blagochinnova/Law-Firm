@@ -666,6 +666,49 @@ section {
 .additional-service-item p {
   color: #d4d4d4;
 }
+.business-preview {
+  padding: 5rem 0;
+  background: linear-gradient(180deg, var(--bg-dark), var(--bg-darker));
+}
+
+.business-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.preview-card {
+  padding: 1.8rem 1.4rem;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: all 0.3s ease;
+}
+
+.preview-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-4px);
+}
+
+.preview-card h4 {
+  margin-bottom: 0.5rem;
+  color: var(--gold);
+}
+
+.preview-card p {
+  color: #cfcfcf;
+  font-size: 0.95rem;
+}
+
+.business-preview-cta {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+
+
+
 
 /* Team Section */
 .team-grid {
