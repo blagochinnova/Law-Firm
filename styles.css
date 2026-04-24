@@ -194,24 +194,54 @@ p {
 }
 
 .nav-mobile {
-  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100vh;
+
+  background: rgba(0, 0, 0, 0.95); /* твій стиль */
+  backdrop-filter: blur(10px);
+
+  display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 1rem;
-  padding: 1.5rem;
-  background-color: rgba(0, 0, 0, 0.95);
-  backdrop-filter: blur(12px);
-  border-top: 1px solid var(--border-color);
+  gap: 20px;
+
+  transform: translateX(100%);
+  transition: transform 0.4s ease;
+
+  z-index: 1001;
 }
 
 .nav-mobile.active {
-  display: flex;
+  transform: translateX(0);
 }
 .mobile-socials {
   justify-content: center;
   margin: 1rem 0;
 }
+.mobile-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
 
+backdrop-filter: blur(6px);
+  background: rgba(0, 0, 0, 0.4);
+
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+
+  z-index: 1000;
+}
+.mobile-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
 @media (min-width: 768px) {
   .nav-mobile {
     display: none !important;

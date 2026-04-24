@@ -15,12 +15,18 @@ window.addEventListener("scroll", () => {
 });
 
 // Mobile menu toggle
-const mobileMenuBtn = document.getElementById("mobileMenuBtn");
-const navMobile = document.getElementById("navMobile");
+const btn = document.getElementById("mobileMenuBtn");
+const menu = document.getElementById("navMobile");
+const overlay = document.getElementById("mobileOverlay");
 
-mobileMenuBtn.addEventListener("click", () => {
-  mobileMenuBtn.classList.toggle("active");
-  navMobile.classList.toggle("active");
+btn.addEventListener("click", () => {
+  menu.classList.toggle("active");
+  overlay.classList.toggle("active");
+});
+
+overlay.addEventListener("click", () => {
+  menu.classList.remove("active");
+  overlay.classList.remove("active");
 });
 
 // Close mobile menu when clicking on a link
