@@ -705,10 +705,55 @@ section {
   text-align: center;
   margin-top: 2.5rem;
 }
+@media (max-width: 1024px) {
+  .business-preview-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.3rem;
+  }
+}
 
+@media (max-width: 768px) {
+  .business-preview {
+    padding: 3.5rem 0;
+  } 
+.business-preview-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
 
+  .preview-card {
+    padding: 1.5rem 1.2rem;
+    border-radius: 14px;
+  }
 
+  .preview-card h4 {
+    font-size: 1.05rem;
+  }
 
+  .preview-card p {
+    font-size: 0.9rem;
+  }
+
+  .business-preview-cta {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .business-preview {
+    padding: 3rem 0;
+  }
+
+  .preview-card {
+    padding: 1.3rem 1rem;
+  }
+
+  .preview-card p {
+    font-size: 0.88rem;
+    line-height: 1.5;
+  }
+}
 
 /* Team Section */
 .team-grid {
