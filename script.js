@@ -20,21 +20,24 @@ const menu = document.getElementById("navMobile");
 const overlay = document.getElementById("mobileOverlay");
 
 btn.addEventListener("click", () => {
+  btn.classList.toggle("active");
   menu.classList.toggle("active");
   overlay.classList.toggle("active");
 });
 
 overlay.addEventListener("click", () => {
+  btn.classList.remove("active");
   menu.classList.remove("active");
   overlay.classList.remove("active");
 });
 
-// Close mobile menu when clicking on a link
-const navLinks = navMobile.querySelectorAll(".nav-link");
+const navLinks = menu.querySelectorAll(".nav-link");
+
 navLinks.forEach((link) => {
   link.addEventListener("click", () => {
-    mobileMenuBtn.classList.remove("active");
-    navMobile.classList.remove("active");
+    btn.classList.remove("active");
+    menu.classList.remove("active");
+    overlay.classList.remove("active");
   });
 });
 

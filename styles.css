@@ -1,4 +1,9 @@
-/* Reset and Base Styles */
+
+/* =====================================================
+   RESET AND BASE / БАЗОВІ СТИЛІ
+   Скидання стандартних стилів, змінні, типографіка, загальний контейнер.
+   ===================================================== */
+
 * {
   margin: 0;
   padding: 0;
@@ -37,33 +42,28 @@ h6 {
   font-family: "Playfair Display", serif;
   font-weight: 700;
 }
+
 a {
   text-decoration: none;
 }
+
 p {
   line-height: 1.7;
   letter-spacing: 0.3px;
   color: rgba(255,255,255,0.75);
 }
+
 .container {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 1rem;
 }
 
-@media (min-width: 640px) {
-  .container {
-    padding: 0 1.5rem;
-  }
-}
+/* =====================================================
+   HEADER / ШАПКА
+   Фіксована шапка, логотип, десктопне та мобільне меню, соцмережі.
+   ===================================================== */
 
-@media (min-width: 1024px) {
-  .container {
-    padding: 0 2rem;
-  }
-}
-
-/* Header */
 .header {
   position: fixed;
   top: 0;
@@ -106,42 +106,11 @@ p {
   align-items: center;
   gap: 2rem;
 }
+
 .header-socials {
   display: flex;
   align-items: center;
   gap: 12px;
-}
-
-.social-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  border: 1px solid var(--gold);
-  transition: all 0.3s ease;
-}
-
-.social-link svg {
-  width: 18px;
-  height: 18px;
-  stroke: var(--gold);
-  stroke-width: 1.6;
-}
-
-.social-link:hover {
-  background: var(--gold);
-}
-
-.social-link:hover svg {
-  stroke: #fff;
-}
-
-@media (min-width: 768px) {
-  .nav-desktop {
-    display: flex;
-  }
 }
 
 .nav-link {
@@ -157,7 +126,6 @@ p {
   color: var(--gold);
 }
 
-
 .mobile-menu-btn {
   display: flex;
   flex-direction: column;
@@ -166,12 +134,8 @@ p {
   border: none;
   cursor: pointer;
   padding: 8px;
-}
-
-@media (min-width: 768px) {
-  .mobile-menu-btn {
-    display: none;
-  }
+  position: relative;
+  z-index: 1100;
 }
 
 .mobile-menu-btn span {
@@ -182,7 +146,7 @@ p {
 }
 
 .mobile-menu-btn.active span:nth-child(1) {
-  transform: rotate(45deg) translate(8px, 8px);
+  transform: translateY(8px) rotate(45deg);
 }
 
 .mobile-menu-btn.active span:nth-child(2) {
@@ -190,7 +154,7 @@ p {
 }
 
 .mobile-menu-btn.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
+  transform: translateY(-8px) rotate(-45deg);
 }
 
 .nav-mobile {
@@ -199,56 +163,52 @@ p {
   right: 0;
   width: 50%;
   height: 100vh;
-
-  background: rgba(0, 0, 0, 0.95); /* твій стиль */
+  background: rgba(0, 0, 0, 0.95);
+  /* твій стиль */
   backdrop-filter: blur(10px);
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 20px;
-
   transform: translateX(100%);
   transition: transform 0.4s ease;
-
   z-index: 1001;
 }
 
 .nav-mobile.active {
   transform: translateX(0);
 }
+
 .mobile-socials {
   justify-content: center;
   margin: 1rem 0;
 }
+
 .mobile-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
-
-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
   background: rgba(0, 0, 0, 0.4);
-
   opacity: 0;
   visibility: hidden;
   transition: 0.3s;
-
   z-index: 1000;
 }
+
 .mobile-overlay.active {
   opacity: 1;
   visibility: visible;
 }
-@media (min-width: 768px) {
-  .nav-mobile {
-    display: none !important;
-  }
-}
 
-/* Hero Section */
+/* =====================================================
+   HERO SECTION / ПЕРШИЙ ЕКРАН
+   Фонове зображення, затемнення, заголовок, опис, кнопки та декоративні елементи.
+   ===================================================== */
+
 .hero {
   position: relative;
   min-height: 100vh;
@@ -355,24 +315,6 @@ backdrop-filter: blur(6px);
   font-weight: 700;
 }
 
-@media (min-width: 640px) {
-  .hero-title {
-    font-size: 3rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .hero-title {
-    font-size: 3.75rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .hero-title {
-    font-size: 4.5rem;
-  }
-}
-
 .hero-title-white {
   color: var(--text-white);
 }
@@ -389,12 +331,6 @@ backdrop-filter: blur(6px);
   margin-left: auto;
   margin-right: auto;
   line-height: 1.75;
-}
-
-@media (min-width: 640px) {
-  .hero-description {
-    font-size: 1.25rem;
-  }
 }
 
 .hero-free-badge {
@@ -422,6 +358,11 @@ backdrop-filter: blur(6px);
   color: var(--gold);
 }
 
+/* =====================================================
+   BUTTONS / КНОПКИ
+   Загальні стилі кнопок і їхні варіанти.
+   ===================================================== */
+
 .hero-buttons {
   display: flex;
   flex-direction: column;
@@ -431,12 +372,6 @@ backdrop-filter: blur(6px);
   margin-bottom: 4rem;
 }
 
-@media (min-width: 640px) {
-  .hero-buttons {
-    flex-direction: row;
-  }
-}
-/* Buttons */
 .btn {
   padding: 0.75rem 1.5rem;
   border: none;
@@ -479,16 +414,14 @@ backdrop-filter: blur(6px);
   width: 100%;
 }
 
-/* Section Styles */
+/* =====================================================
+   SECTION STYLES / ЗАГАЛЬНІ СЕКЦІЇ
+   Спільні стилі секцій, заголовків, описів і декоративних елементів.
+   ===================================================== */
+
 section {
   position: relative;
   padding: 5rem 0;
-}
-
-@media (min-width: 640px) {
-  section {
-    padding: 7rem 0;
-  }
 }
 
 .section-decoration {
@@ -565,18 +498,6 @@ section {
   font-weight: 700;
 }
 
-@media (min-width: 640px) {
-  .section-title {
-    font-size: 2.5rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .section-title {
-    font-size: 3rem;
-  }
-}
-
 .section-title-white {
   color: var(--text-white);
 }
@@ -592,24 +513,16 @@ section {
   margin: 0 auto;
 }
 
-/* Services Section */
+/* =====================================================
+   SERVICES / ПОСЛУГИ
+   Сітка послуг, картки послуг і додаткові послуги.
+   ===================================================== */
+
 .services-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
   margin-bottom: 5rem;
-}
-
-@media (min-width: 768px) {
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .services-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
 }
 
 .service-card {
@@ -668,7 +581,6 @@ section {
   line-height: 1.75;
 }
 
-/* Additional Services */
 .additional-services {
   margin-top: 5rem;
   padding: 3rem;
@@ -683,12 +595,6 @@ section {
   backdrop-filter: blur(4px);
 }
 
-@media (min-width: 640px) {
-  .additional-services {
-    padding: 3rem;
-  }
-}
-
 .additional-services-title {
   font-size: 1.5rem;
   color: var(--gold);
@@ -696,22 +602,10 @@ section {
   text-align: center;
 }
 
-@media (min-width: 640px) {
-  .additional-services-title {
-    font-size: 1.875rem;
-  }
-}
-
 .additional-services-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
-}
-
-@media (min-width: 768px) {
-  .additional-services-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 .additional-services-list {
@@ -739,8 +633,11 @@ section {
   color: #d4d4d4;
 }
 
+/* =====================================================
+   BUSINESS PREVIEW / ПРЕВʼЮ ДЛЯ БІЗНЕСУ
+   Блок з коротким описом бізнес-напрямку.
+   ===================================================== */
 
-/* Business Preview */
 .business-preview {
   padding: 5rem 0;
   background: linear-gradient(180deg, var(--bg-dark), var(--bg-darker));
@@ -756,7 +653,6 @@ section {
 .preview-card {
   padding: 1.8rem 1.4rem;
   border-radius: 16px;
-  background: rgba(255,255,255,0.04);
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
   background: rgba(255,255,255,0.03);
@@ -767,11 +663,6 @@ section {
   border-color: var(--gold);
   transform: translateY(-4px);
   box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-}
-
-.preview-card h4 {
-  margin-bottom: 0.5rem;
-  color: var(--gold);
 }
 
 .preview-card p {
@@ -796,79 +687,27 @@ section {
 }
 
 .preview-card h4 {
+  margin-bottom: 0.5rem;
+  color: var(--gold);
   margin: 0;
 }
+
 .business-preview-cta {
   margin-top: 2rem;
   text-align: center;
 }
-@media (max-width: 1024px) {
-  .business-preview-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.3rem;
-  }
-}
 
-@media (max-width: 768px) {
-  .business-preview {
-    padding: 3.5rem 0;
-  }
+/* =====================================================
+   TEAM / КОМАНДА
+   Сітка команди, картки, фото, інформація та соцмережі.
+   ===================================================== */
 
-  .business-preview-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    margin-top: 1.5rem;
-  }
-
-  .preview-card {
-    padding: 1.5rem 1.2rem;
-    border-radius: 14px;
-  }
-
-  .preview-card p {
-    font-size: 0.9rem;
-  }
-
-  .business-preview-cta {
-    margin-top: 2rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .business-preview {
-    padding: 3rem 0;
-  }
-
-  .preview-card {
-    padding: 1.3rem 1rem;
-  }
-
-  .preview-card p {
-    font-size: 0.88rem;
-    line-height: 1.5;
-  }
-}
-
-
-/* Team Section */
 .team-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
   max-width: 72rem;
   margin: 0 auto;
-}
-
-@media (min-width: 768px) {
-  .team-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .team-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
 }
 
 .team-card {
@@ -916,7 +755,9 @@ section {
   font-weight: 700;
   color: var(--gold);
   font-family: 'Playfair Display', serif;
-} */
+}
+
+*/
 .team-photo {
   width: 100%;
   height: 100%;
@@ -937,10 +778,10 @@ section {
   /* можна зробити м’які кути */
 }
 
-/* ефект при наведенні — легке наближення */
 .team-avatar:hover .team-photo {
   transform: scale(1.05);
 }
+
 .team-info {
   padding: 1.5rem;
 }
@@ -986,32 +827,36 @@ section {
 }
 
 .social-link:hover {
+  background: var(--gold);
   background-color: rgba(212, 175, 55, 0.2);
   border-color: rgba(212, 175, 55, 0.5);
 }
 
 .social-link svg {
+  width: 18px;
+  height: 18px;
+  stroke: var(--gold);
+  stroke-width: 1.6;
   color: #9ca3af;
   transition: color 0.2s;
 }
 
 .social-link:hover svg {
+  stroke: #fff;
   color: var(--gold);
 }
 
-/* Contact Section */
+/* =====================================================
+   CONTACT / КОНТАКТИ
+   Форма звʼязку та контактні картки.
+   ===================================================== */
+
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 3rem;
   max-width: 72rem;
   margin: 0 auto;
-}
-
-@media (min-width: 1024px) {
-  .contact-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 .contact-form-wrapper {
@@ -1131,7 +976,11 @@ section {
   font-size: 0.875rem;
 }
 
-/* Footer */
+/* =====================================================
+   FOOTER / ПІДВАЛ
+   Нижня частина сайту, посилання, контакти та копірайт.
+   ===================================================== */
+
 .footer {
   background-color: var(--bg-darker);
   border-top: 1px solid var(--border-color);
@@ -1143,18 +992,6 @@ section {
   grid-template-columns: 1fr;
   gap: 2rem;
   margin-bottom: 2rem;
-}
-
-@media (min-width: 768px) {
-  .footer-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .footer-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
 }
 
 .footer-brand .logo {
@@ -1212,19 +1049,28 @@ section {
   align-items: flex-start;
   gap: 0.5rem;
   margin-bottom: 0.75rem;
+  transition: all 0.3s ease;
 }
 
 .footer-contact-item svg {
   color: var(--gold);
   margin-top: 2px;
   flex-shrink: 0;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .footer-contact-item a {
   color: #9ca3af;
   font-size: 0.875rem;
+  transition: all 0.3s ease;
 }
 
+.footer-contact-item:hover svg {
+  transform: scale(1.1);
+}
+.footer-contact-item:hover a {
+  color: var(--gold);
+}
 .footer-bottom {
   display: flex;
   flex-direction: column;
@@ -1232,13 +1078,6 @@ section {
   align-items: center;
   padding-top: 2rem;
   border-top: 1px solid var(--border-color);
-}
-
-@media (min-width: 768px) {
-  .footer-bottom {
-    flex-direction: row;
-    justify-content: space-between;
-  }
 }
 
 .footer-bottom p {
@@ -1264,7 +1103,11 @@ section {
   color: var(--gold);
 }
 
-/* Toast Notification */
+/* =====================================================
+   TOAST / СПОВІЩЕННЯ
+   Випливаюче повідомлення після дії користувача.
+   ===================================================== */
+
 .toast {
   position: fixed;
   top: 20px;
@@ -1288,13 +1131,19 @@ section {
   pointer-events: auto;
 }
 
-/* Icon utilities */
+/* =====================================================
+   UTILITIES / ДОПОМІЖНІ КЛАСИ
+   Маленькі службові класи.
+   ===================================================== */
+
 .icon {
   flex-shrink: 0;
 }
 
-
-/* BUSINESS SUPPORT - UNIFIED STYLE */
+/* =====================================================
+   BUSINESS SUPPORT PAGE / СТОРІНКА ДЛЯ БІЗНЕСУ
+   Стилі для окремої сторінки бізнес-послуг.
+   ===================================================== */
 
 .business-support {
   position: relative;
@@ -1678,6 +1527,7 @@ section {
   text-align: center;
   color: var(--text-white);
 }
+
 .retail-subtitle {
   margin: 12px 0 8px;
   font-size: 15px;
@@ -1762,6 +1612,231 @@ section {
   transform: scale(1.03);
 }
 
+/* =====================================================
+   ADAPTIVE / АДАПТИВНІСТЬ
+   Усі медіа-запити зібрані в одному місці внизу файлу.
+   ===================================================== */
+
+/* @media (min-width: 640px) */
+@media (min-width: 640px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
+/* @media (min-width: 1024px) */
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 2rem;
+  }
+}
+
+/* @media (min-width: 768px) */
+@media (min-width: 768px) {
+  .nav-desktop {
+    display: flex;
+  }
+}
+
+/* @media (min-width: 768px) */
+@media (min-width: 768px) {
+  .mobile-menu-btn {
+    display: none;
+  }
+}
+
+/* @media (min-width: 768px) */
+@media (min-width: 768px) {
+  .nav-mobile {
+    display: none !important;
+  }
+}
+
+/* @media (min-width: 640px) */
+@media (min-width: 640px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+}
+
+/* @media (min-width: 768px) */
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 3.75rem;
+  }
+}
+
+/* @media (min-width: 1024px) */
+@media (min-width: 1024px) {
+  .hero-title {
+    font-size: 4.5rem;
+  }
+}
+
+/* @media (min-width: 640px) */
+@media (min-width: 640px) {
+  .hero-description {
+    font-size: 1.25rem;
+  }
+}
+
+/* @media (min-width: 640px) */
+@media (min-width: 640px) {
+  .hero-buttons {
+    flex-direction: row;
+  }
+}
+
+/* @media (min-width: 640px) */
+@media (min-width: 640px) {
+  section {
+    padding: 7rem 0;
+  }
+}
+
+/* @media (min-width: 640px) */
+@media (min-width: 640px) {
+  .section-title {
+    font-size: 2.5rem;
+  }
+}
+
+/* @media (min-width: 768px) */
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 3rem;
+  }
+}
+
+/* @media (min-width: 768px) */
+@media (min-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* @media (min-width: 1024px) */
+@media (min-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* @media (min-width: 640px) */
+@media (min-width: 640px) {
+  .additional-services {
+    padding: 3rem;
+  }
+}
+
+/* @media (min-width: 640px) */
+@media (min-width: 640px) {
+  .additional-services-title {
+    font-size: 1.875rem;
+  }
+}
+
+/* @media (min-width: 768px) */
+@media (min-width: 768px) {
+  .additional-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* @media (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .business-preview-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.3rem;
+  }
+}
+
+/* @media (max-width: 768px) */
+@media (max-width: 768px) {
+  .business-preview {
+    padding: 3.5rem 0;
+  }
+
+  .business-preview-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .preview-card {
+    padding: 1.5rem 1.2rem;
+    border-radius: 14px;
+  }
+
+  .preview-card p {
+    font-size: 0.9rem;
+  }
+
+  .business-preview-cta {
+    margin-top: 2rem;
+  }
+}
+
+/* @media (max-width: 480px) */
+@media (max-width: 480px) {
+  .business-preview {
+    padding: 3rem 0;
+  }
+
+  .preview-card {
+    padding: 1.3rem 1rem;
+  }
+
+  .preview-card p {
+    font-size: 0.88rem;
+    line-height: 1.5;
+  }
+}
+
+/* @media (min-width: 768px) */
+@media (min-width: 768px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* @media (min-width: 1024px) */
+@media (min-width: 1024px) {
+  .team-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* @media (min-width: 1024px) */
+@media (min-width: 1024px) {
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* @media (min-width: 768px) */
+@media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* @media (min-width: 1024px) */
+@media (min-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* @media (min-width: 768px) */
+@media (min-width: 768px) {
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* @media (max-width: 1100px) */
 @media (max-width: 1100px) {
   .practice-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -1774,6 +1849,7 @@ section {
   }
 }
 
+/* @media (max-width: 768px) */
 @media (max-width: 768px) {
   .business-support {
     padding: 4.5rem 0;
