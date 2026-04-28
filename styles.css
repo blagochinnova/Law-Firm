@@ -86,19 +86,19 @@ p {
 }
 
 .logo {
-  cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 12px;
-  cursor: pointer;
-  color: var(--gold);
+  gap: 10px;
   text-decoration: none;
+  color: var(--gold);
 }
 
 .logo-svg {
-  height: 28px;
-  width: auto;
-  color: var(--gold);
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
 }
 .logo-text {
   font-family: "Playfair Display", serif;
