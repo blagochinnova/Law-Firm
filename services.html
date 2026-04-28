@@ -1,525 +1,1004 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Еволюція - Юридична компанія</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="styles.css" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet">
+      rel="stylesheet"
+    />
   </head>
-<body>
-    
-         <!-- Header -->
+
+  <body>
+    <!-- Header -->
     <header class="header" id="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo" onclick="scrollToSection('hero')">
-                    <span class="logo-pravo">Еволюція</span>
-                </div>
-                <nav class="nav-desktop">
-                    <a href="./index.html" class="nav-link nav-link-anchor">Головна</a>
-                    <button onclick="scrollToSection('team')" class="nav-link">Команда</button>
-                    <button onclick="scrollToSection('contact')" class="nav-link">Контакти</button>
-                    <button onclick="scrollToSection('contact')" class="btn btn-primary">Консультація</button>
-                </nav>
-                <button class="mobile-menu-btn" id="mobileMenuBtn">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+      <div class="container">
+        <div class="header-content">
+          <a href="./index.html" class="logo">
+            <img src="./img/logo-icon.svg" alt="Еволюція" class="logo-svg" />
+            <text
+              x="0"
+              y="28"
+              font-family="Playfair Display"
+              font-size="28"
+              fill="currentColor"
+            >
+              Еволюція
+            </text>
+          </a>
+
+          <nav class="nav-desktop">
+            <a class="nav-link nav-link-anchor" href="./index.html">Головна</a>
+            <button class="nav-link" onclick="scrollToSection('team')">
+              Команда
+            </button>
+            <button class="nav-link" onclick="scrollToSection('contact')">
+              Контакти
+            </button>
+            <div class="header-socials">
+              <!-- Instagram -->
+              <a
+                href="https://instagram.com/ТВОЙ_АККАУНТ"
+                target="_blank"
+                class="social-link"
+              >
+                <svg viewBox="0 0 24 24" fill="none">
+                  <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                  <circle cx="12" cy="12" r="4"></circle>
+                  <circle cx="17.5" cy="6.5" r="1"></circle>
+                </svg>
+              </a>
+
+              <!-- Telegram -->
+              <a
+                href="https://t.me/ТВОЙ_АККАУНТ"
+                target="_blank"
+                class="social-link"
+              >
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M22 2L11 13"></path>
+                  <path d="M22 2L15 22L11 13L2 9L22 2Z"></path>
+                </svg>
+              </a>
             </div>
-            <nav class="nav-mobile" id="navMobile">
-                <a href="./index.html" class="nav-link nav-link-anchor">Головна</a>
-                <button onclick="scrollToSection('team')" class="nav-link">Команда</button>
-                <button onclick="scrollToSection('contact')" class="nav-link">Контакти</button>
-                <button onclick="scrollToSection('contact')" class="btn btn-primary">Консультація</button>
-            </nav>
+            <button
+              class="btn btn-primary"
+              onclick="scrollToSection('contact')"
+            >
+              Консультація
+            </button>
+          </nav>
+
+          <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
+
+        <!-- Затемнення фону при відкритому мобільному меню -->
+        <div class="mobile-overlay" id="mobileOverlay"></div>
+
+        <!-- Mobile Navigation -->
+        <nav class="nav-mobile" id="navMobile">
+          <a class="nav-link nav-link-anchor" href="./index.html">Головна</a>
+          <button class="nav-link" onclick="scrollToSection('team')">
+            Команда
+          </button>
+          <button class="nav-link" onclick="scrollToSection('contact')">
+            Контакти
+          </button>
+          <div class="header-socials mobile-socials">
+            <!-- Instagram -->
+            <a
+              href="https://instagram.com/ТВОЙ_АККАУНТ"
+              target="_blank"
+              class="social-link"
+            >
+              <svg viewBox="0 0 24 24" fill="none">
+                <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                <circle cx="12" cy="12" r="4"></circle>
+                <circle cx="17.5" cy="6.5" r="1"></circle>
+              </svg>
+            </a>
+
+            <!-- Telegram -->
+            <a
+              href="https://t.me/ТВОЙ_АККАУНТ"
+              target="_blank"
+              class="social-link"
+            >
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M22 2L11 13"></path>
+                <path d="M22 2L15 22L11 13L2 9L22 2Z"></path>
+              </svg>
+            </a>
+          </div>
+          <button class="btn btn-primary" onclick="scrollToSection('contact')">
+            Консультація
+          </button>
+        </nav>
+      </div>
     </header>
 
-<section class="business-support" id="business-support">
-  <div class="container">
-    <div class="section-heading">
-      <span class="section-label">Юридичний супровід бізнесу</span>
-      <h2>Комплексний юридичний супровід вашого бізнесу (LPO — Legal Process Outsourcing)</h2>
-      <p>Ми робимо право прозорим, а ваш бізнес — захищеним.</p>
-    </div>
-
-    <div class="service-block">
-      <div class="block-title">
-        <span>01</span>
-        <h3>Абонентське юридичне обслуговування</h3>
+    <!-- Hero Section -->
+    <section class="services-hero" id="hero">
+      <!-- Фон hero -->
+      <div class="hero-bg services-hero-bg">
+        <img
+          src="./img/second-hero.jpg"
+          alt="Юридичний супровід бізнесу"
+          class="hero-image"
+        />
+        <div class="hero-overlay services-hero-overlay"></div>
       </div>
 
-      <div class="practice-grid">
-        <article class="practice-card">
-          <div class="practice-icon">✍️</div>
-          <h4>Договірна практика</h4>
-          <p>Гіг-контракти (для IT/Diia City), NDA, NCA, ЗЕД-контракти, договори позики та послуг.</p>
-        </article>
+      <!-- Текст hero -->
+      <div class="container">
+        <div class="section-header section-heading services-hero-content">
+          <span class="section-badge section-label"
+            >Юридичний супровід бізнесу</span
+          >
 
-        <article class="practice-card">
-          <div class="practice-icon">🏛️</div>
-          <h4>Корпоративне право</h4>
-          <p>Реєстрація та структурування бізнесу, супровід M&amp;A, корпоративні договори, ліквідація.</p>
-        </article>
+          <h1 class="section-title">
+            Комплексний юридичний супровід вашого бізнесу
+            <span class="hero-title-gold"
+              >(LPO — Legal Process Outsourcing)</span
+            >
+          </h1>
 
-        <article class="practice-card">
-          <div class="practice-icon">📊</div>
-          <h4>Податки та перевірки</h4>
-          <p>Податкове планування, супровід перевірок ДПС, відкриття рахунків в Україні та за кордоном.</p>
-        </article>
-
-        <article class="practice-card">
-          <div class="practice-icon">🛡️</div>
-          <h4>Інтелектуальна власність</h4>
-          <p>Реєстрація ТМ, захист авторських прав, супровід спорів щодо ОІВ.</p>
-        </article>
-
-        <article class="practice-card">
-          <div class="practice-icon">👥</div>
-          <h4>HR та кадри</h4>
-          <p>Кадровий аудит, звільнення та прийняття працівників, робота з ФОП та гіг-фахівцями.</p>
-        </article>
-      </div>
-    </div>
-
-    <div class="military-accounting">
-      <div class="military-content">
-        <span class="section-label light">02 Військовий облік на підприємстві</span>
-        <h3>Повна відповідність без штрафів</h3>
-        <p class="military-lead">
-          Штрафи сягають десятків тисяч гривень, а ТЦК вимагає ідеального ведення документації.
-        </p>
-
-        <ul class="military-list">
-          <li>Призначення відповідальної особи та її навчання</li>
-          <li>Формування журналів, списків та актуалізація даних</li>
-          <li>Супровід планових та позапланових перевірок ТЦК</li>
-          <li>Аутсорсинг військового обліку: ми ведемо вашу базу, ви уникаєте ризиків</li>
-        </ul>
-
-        <a href="#contact" class="btn-gold">Замовити консультацію</a>
-      </div>
-
-      <div class="military-visual">
-        <div class="visual-card">
-          <span>Військовий облік підприємства</span>
+          <p class="section-description">
+            Ми робимо право прозорим, а ваш бізнес — захищеним.
+          </p>
+        </div>
+        <div class="hero-buttons">
+          <button
+            onclick="scrollToSection('business-support')"
+            class="btn btn-primary btn-lg"
+          >
+            Наші послуги
+          </button>
+          <button
+            onclick="scrollToSection('contact')"
+            class="btn btn-outline btn-lg"
+          >
+            Зв'язатися з нами
+          </button>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="service-block cooperation-block">
-      <div class="block-title">
-        <span>03</span>
-        <h3>Формати співпраці</h3>
-      </div>
-
-      <div class="cooperation-grid">
-        <article class="cooperation-card">
-          <div class="cooperation-icon">○</div>
-          <div>
-            <h4>Разова консультація</h4>
-            <p>Швидке вирішення конкретного правового питання.</p>
+    <!-- Business Support Section -->
+    <section class="business-support" id="business-support">
+      <div class="container">
+        <!-- Block 01 -->
+        <div class="service-block">
+          <div class="block-title">
+            <span>01</span>
+            <h3>Абонентське юридичне обслуговування</h3>
           </div>
-        </article>
 
-        <article class="cooperation-card featured">
-          <div class="cooperation-icon">★</div>
-          <div>
-            <h4>Абонентський пакет</h4>
-            <p>Щомісячна підтримка за фіксовану вартість (найкращий вибір для бізнесу).</p>
+          <div class="practice-grid">
+            <!-- Договірна практика -->
+            <article class="service-card practice-card">
+              <div class="service-icon practice-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                  />
+                  <polyline points="14 2 14 8 20 8" />
+                  <line x1="8" y1="13" x2="16" y2="13" />
+                  <line x1="8" y1="17" x2="14" y2="17" />
+                </svg>
+              </div>
+              <h4 class="service-title">Договірна практика</h4>
+              <p class="service-description">
+                Гіг-контракти (для IT/Diia City), NDA, NCA, ЗЕД-контракти,
+                договори позики та послуг.
+              </p>
+            </article>
+
+            <!-- Корпоративне право -->
+            <article class="service-card practice-card">
+              <div class="service-icon practice-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path d="M3 21h18" />
+                  <path d="M5 21V7l7-4 7 4v14" />
+                  <path d="M9 21v-6h6v6" />
+                </svg>
+              </div>
+              <h4 class="service-title">Корпоративне право</h4>
+              <p class="service-description">
+                Реєстрація та структурування бізнесу, супровід M&amp;A,
+                корпоративні договори, ліквідація.
+              </p>
+            </article>
+
+            <!-- Податки -->
+            <article class="service-card practice-card">
+              <div class="service-icon practice-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <line x1="12" y1="20" x2="12" y2="10" />
+                  <line x1="18" y1="20" x2="18" y2="4" />
+                  <line x1="6" y1="20" x2="6" y2="14" />
+                </svg>
+              </div>
+              <h4 class="service-title">Податки та перевірки</h4>
+              <p class="service-description">
+                Податкове планування, супровід перевірок ДПС, відкриття рахунків
+                в Україні та за кордоном.
+              </p>
+            </article>
+
+            <!-- Інтелектуальна власність -->
+            <article class="service-card practice-card">
+              <div class="service-icon practice-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path d="M12 1l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" />
+                </svg>
+              </div>
+              <h4 class="service-title">Інтелектуальна власність</h4>
+              <p class="service-description">
+                Реєстрація ТМ, захист авторських прав, супровід спорів щодо ОІВ.
+              </p>
+            </article>
+
+            <!-- HR -->
+            <article class="service-card practice-card">
+              <div class="service-icon practice-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M17 11a4 4 0 1 0 0-8" />
+                  <path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" />
+                </svg>
+              </div>
+              <h4 class="service-title">HR та кадри</h4>
+              <p class="service-description">
+                Кадровий аудит, звільнення та прийняття працівників, робота з
+                ФОП та гіг-фахівцями.
+              </p>
+            </article>
           </div>
-        </article>
+        </div>
+
+        <!-- Block 02 -->
+        <div class="military-accounting">
+          <div class="military-content">
+            <span class="section-badge section-label light"
+              >02 Військовий облік на підприємстві</span
+            >
+
+            <h3>Повна відповідність без штрафів</h3>
+
+            <p class="military-lead">
+              Штрафи сягають десятків тисяч гривень, а ТЦК вимагає ідеального
+              ведення документації.
+            </p>
+
+            <ul class="military-list">
+              <li>Призначення відповідальної особи та її навчання</li>
+              <li>Формування журналів, списків та актуалізація даних</li>
+              <li>Супровід планових та позапланових перевірок ТЦК</li>
+              <li>
+                Аутсорсинг військового обліку: ми ведемо вашу базу, ви уникаєте
+                ризиків
+              </li>
+            </ul>
+
+            <a class="btn-primary btn btn-gold" href="#contact"
+              >Замовити консультацію</a
+            >
+          </div>
+
+          <div class="military-visual">
+            <div class="visual-card">
+              <span>Військовий облік підприємства</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Block 03 -->
+        <div class="service-block cooperation-block">
+          <div class="block-title">
+            <span>03</span>
+            <h3>Формати співпраці</h3>
+          </div>
+
+          <div class="cooperation-grid">
+            <article class="service-card cooperation-card">
+              <div class="service-icon cooperation-icon">○</div>
+              <div>
+                <h4 class="service-title">Разова консультація</h4>
+                <p class="service-description">
+                  Швидке вирішення конкретного правового питання.
+                </p>
+              </div>
+            </article>
+
+            <article class="service-card cooperation-card featured">
+              <div class="service-icon cooperation-icon">★</div>
+              <div>
+                <h4 class="service-title">Абонентський пакет</h4>
+                <p class="service-description">
+                  Щомісячна підтримка за фіксовану вартість (найкращий вибір для
+                  бізнесу).
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Block 04 -->
+        <div class="retail-support">
+          <div class="block-title">
+            <span>04</span>
+            <h3>Юридичний супровід брендів та вихід у Retail</h3>
+          </div>
+
+          <div class="retail-top">
+            <div class="retail-intro">
+              <h4>
+                Перетворюємо ваш продукт на захищений актив та надійного
+                партнера для великих мереж.
+              </h4>
+              <p>
+                Масштабування бренду та вихід у національні торговельні мережі
+                вимагає не лише маркетингової стратегії, а й міцного юридичного
+                фундаменту. Ми забезпечуємо повний супровід виробників та
+                дистриб’юторів, мінімізуючи ризики при взаємодії з великим
+                бізнесом та державними органами.
+              </p>
+            </div>
+
+            <div class="retail-grid">
+              <!-- Retail-комплаєнс -->
+              <article class="service-card retail-card">
+                <div class="service-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  >
+                    <path d="M12 1l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" />
+                  </svg>
+                </div>
+
+                <h5 class="service-title">
+                  Retail-комплаєнс та договірна архітектура
+                </h5>
+
+                <p class="retail-subtitle">Аналіз договорів із мережами:</p>
+                <ul class="retail-list">
+                  <li>
+                    Детальна експертиза контрактів із національними ритейлерами
+                  </li>
+                  <li>
+                    Коригування прихованих штрафних санкцій, умов дебіторської
+                    заборгованості, маркетингових ретро-бонусів та умов
+                    повернення товару
+                  </li>
+                </ul>
+
+                <p class="retail-subtitle">Побудова дистрибуції:</p>
+                <ul class="retail-list">
+                  <li>
+                    Розробка дилерських та дистриб’юторських угод «з нуля»
+                  </li>
+                  <li>
+                    Покриття всієї території України або вихід на міжнародні
+                    ринки
+                  </li>
+                </ul>
+              </article>
+
+              <!-- Захист бренду -->
+              <article class="service-card retail-card">
+                <div class="service-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  >
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  </svg>
+                </div>
+
+                <h5 class="service-title">Захист капіталу бренду (IP Law)</h5>
+
+                <ul class="retail-list">
+                  <li>
+                    Реєстрація ТМ для лістингу в мережах та захисту від
+                    недобросовісної конкуренції
+                  </li>
+                  <li>
+                    Антипіратство та юридичне блокування продажів підробленої чи
+                    «сірої» продукції
+                  </li>
+                  <li>
+                    Захист промислових зразків та реєстрація унікального дизайну
+                    пакування чи форми виробу
+                  </li>
+                </ul>
+              </article>
+
+              <!-- Compliance -->
+              <article class="service-card retail-card">
+                <div class="service-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  >
+                    <path d="M9 11l3 3L22 4" />
+                    <path
+                      d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"
+                    />
+                  </svg>
+                </div>
+
+                <h5 class="service-title">
+                  Compliance &amp; Технічне регулювання
+                </h5>
+
+                <ul class="retail-list">
+                  <li>
+                    Юридичний аудит пакування та маркування на відповідність
+                    технічним регламентам
+                  </li>
+                  <li>Перевірка вимог щодо мови та прав споживачів</li>
+                  <li>
+                    Супровід отримання сертифікатів, декларацій відповідності та
+                    гігієнічних висновків
+                  </li>
+                </ul>
+              </article>
+
+              <!-- Marketing -->
+              <article class="service-card retail-card">
+                <div class="service-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  >
+                    <path d="M3 11l18-5v12L3 13v-2z" />
+                    <path d="M11 11v6" />
+                  </svg>
+                </div>
+
+                <h5 class="service-title">Marketing &amp; Media Law</h5>
+
+                <ul class="retail-list">
+                  <li>
+                    Супровід рекламних кампаній та юридичний аналіз креативів
+                  </li>
+                  <li>Уникнення штрафів за порушення Закону «Про рекламу»</li>
+                  <li>Контракти з інфлюенсерами та амбасадорами бренду</li>
+                  <li>
+                    Регулювання передачі прав на контент і відповідальності за
+                    репутаційні ризики
+                  </li>
+                </ul>
+              </article>
+            </div>
+          </div>
+
+          <div class="retail-benefits">
+            <h4>Чому вашому бренду потрібен юридичний партнер?</h4>
+
+            <div class="benefits-grid">
+              <div class="benefit-item">
+                <h5>Професійна позиція в переговорах</h5>
+                <p>
+                  Наявність адвокатського супроводу змінює баланс сил при
+                  узгодженні умов із ритейлерами.
+                </p>
+              </div>
+
+              <div class="benefit-item">
+                <h5>Захист маржинальності</h5>
+                <p>
+                  Ми прибираємо з договорів юридичні пастки, які призводять до
+                  неочікуваних фінансових втрат (штрафи, логістичні
+                  нарахування).
+                </p>
+              </div>
+
+              <div class="benefit-item">
+                <h5>Легітимність масштабування</h5>
+                <p>
+                  Ваш бренд готовий до будь-яких перевірок — від податкової до
+                  захисту прав споживачів.
+                </p>
+              </div>
+            </div>
+
+            <a class="btn-outline btn btn-dark" href="#contact"
+              >Замовити Legal Audit</a
+            >
+          </div>
+        </div>
       </div>
-    </div>
-
-    <div class="retail-support">
-  <div class="block-title">
-    <span>04</span>
-    <h3>Юридичний супровід брендів та вихід у Retail</h3>
-  </div>
-
-  <div class="retail-top">
-    <div class="retail-intro">
-      <h4>Перетворюємо ваш продукт на захищений актив та надійного партнера для великих мереж.</h4>
-      <p>
-        Масштабування бренду та вихід у національні торговельні мережі вимагає не лише маркетингової
-        стратегії, а й міцного юридичного фундаменту. Ми забезпечуємо повний супровід виробників та
-        дистриб’юторів, мінімізуючи ризики при взаємодії з великим бізнесом та державними органами.
-      </p>
-    </div>
-
-    <div class="retail-grid">
-      <article class="retail-card">
-        <h5>⚖️ Retail-комплаєнс та договірна архітектура</h5>
-
-        <p class="retail-subtitle">Аналіз договорів із мережами:</p>
-        <ul class="retail-list">
-          <li>Детальна експертиза контрактів із національними ритейлерами</li>
-          <li>Коригування прихованих штрафних санкцій, умов дебіторської заборгованості, маркетингових ретро-бонусів та умов повернення товару</li>
-        </ul>
-
-        <p class="retail-subtitle">Побудова дистрибуції:</p>
-        <ul class="retail-list">
-          <li>Розробка дилерських та дистриб’юторських угод «з нуля»</li>
-          <li>Покриття всієї території України або вихід на міжнародні ринки</li>
-        </ul>
-      </article>
-
-      <article class="retail-card">
-        <h5>🛡️ Захист капіталу бренду (IP Law)</h5>
-        <ul class="retail-list">
-          <li>Реєстрація ТМ для лістингу в мережах та захисту від недобросовісної конкуренції</li>
-          <li>Антипіратство та юридичне блокування продажів підробленої чи «сірої» продукції</li>
-          <li>Захист промислових зразків та реєстрація унікального дизайну пакування чи форми виробу</li>
-        </ul>
-      </article>
-
-      <article class="retail-card">
-        <h5>📋 Compliance &amp; Технічне регулювання</h5>
-        <ul class="retail-list">
-          <li>Юридичний аудит пакування та маркування на відповідність технічним регламентам</li>
-          <li>Перевірка вимог щодо мови та прав споживачів</li>
-          <li>Супровід отримання сертифікатів, декларацій відповідності та гігієнічних висновків</li>
-        </ul>
-      </article>
-
-      <article class="retail-card">
-        <h5>📢 Marketing &amp; Media Law</h5>
-        <ul class="retail-list">
-          <li>Супровід рекламних кампаній та юридичний аналіз креативів</li>
-          <li>Уникнення штрафів за порушення Закону «Про рекламу»</li>
-          <li>Контракти з інфлюенсерами та амбасадорами бренду</li>
-          <li>Регулювання передачі прав на контент і відповідальності за репутаційні ризики</li>
-        </ul>
-      </article>
-    </div>
-  </div>
-
-  <div class="retail-benefits">
-    <h4>Чому вашому бренду потрібен юридичний партнер?</h4>
-
-    <div class="benefits-grid">
-      <div class="benefit-item">
-        <h5>Професійна позиція в переговорах</h5>
-        <p>Наявність адвокатського супроводу змінює баланс сил при узгодженні умов із ритейлерами.</p>
-      </div>
-
-      <div class="benefit-item">
-        <h5>Захист маржинальності</h5>
-        <p>Ми прибираємо з договорів юридичні пастки, які призводять до неочікуваних фінансових втрат (штрафи, логістичні нарахування).</p>
-      </div>
-
-      <div class="benefit-item">
-        <h5>Легітимність масштабування</h5>
-        <p>Ваш бренд готовий до будь-яких перевірок — від податкової до захисту прав споживачів.</p>
-      </div>
-    </div>
-
-    <a href="#contact" class="btn-dark">Замовити Legal Audit</a>
-  </div>
-</div>
-  </div>
-</section>
+    </section>
 
     <!-- Team Section -->
-      <section class="team" id="team">
-        <div class="section-decoration section-decoration-3"></div>
-        <div class="container">
-          <div class="section-header">
-            <div class="section-badge">НАША КОМАНДА</div>
-            <h2 class="section-title">
-              <span class="section-title-white">Наша команда </span>
-              <span class="section-title-gold">юристів</span>
-            </h2>
-            <p class="section-description">
-              Досвідчені професіонали, готові захистити ваші права та інтереси
-            </p>
-          </div>
-          <div class="team-grid">
-            <div class="team-card">
-              <div class="team-avatar">
-                <img src="./img/maria.JPG" alt="Марія Іваніщева" class="team-photo" />
-              </div>
-              <div class="team-info">
-                <h3 class="team-name">Марія Іваніщева</h3>
-                <p class="team-position">Адвокат</p>
-                <!-- <p class="team-specialty">Кримінальне та військове право</p> -->
-                <div class="team-social">
-                  <a href="#" class="social-link">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-                    </svg>
-                  </a>
-                  <a href="#" class="social-link">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-                    </svg>
-                  </a>
-                  <a href="#" class="social-link">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                      <rect x="2" y="9" width="4" height="12" />
-                      <circle cx="4" cy="4" r="2" />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-           <div class="team-card">
-              <div class="team-avatar">
-                <img src="./img/lawyer2.JPG" alt="" class="team-photo" />
-              </div>
-              <div class="team-info">
-                <h3 class="team-name">Василь Клименко</h3>
-                <p class="team-position">Військовий юрист</p>
-                <!-- <p class="team-specialty">Кримінальне та військове право</p> -->
-                <div class="team-social">
-                  <a href="#" class="social-link">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-                    </svg>
-                  </a>
-                  <a href="#" class="social-link">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-                    </svg>
-                  </a>
-                  <a href="#" class="social-link">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                      <rect x="2" y="9" width="4" height="12" />
-                      <circle cx="4" cy="4" r="2" />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <!-- <div class="team-card">
-              <div class="team-avatar">
-                <div class="team-avatar-placeholder">
-                  <span>І</span>
-                </div>
-              </div>
-              <div class="team-info">
-                <h3 class="team-name">Ірина Бондаренко</h3>
-                <p class="team-position">Старший юрист</p>
-                <p class="team-specialty">Адміністративне право</p>
-                <div class="team-social">
-                  <a href="#" class="social-link">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-                    </svg>
-                  </a>
-                  <a href="#" class="social-link">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-                    </svg>
-                  </a>
-                  <a href="#" class="social-link">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                      <rect x="2" y="9" width="4" height="12" />
-                      <circle cx="4" cy="4" r="2" />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>  -->
-          </div>
+    <section class="team" id="team">
+      <div class="section-decoration section-decoration-3"></div>
+
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">НАША КОМАНДА</div>
+
+          <h2 class="section-title">
+            <span class="section-title-white">Наша команда </span>
+            <span class="section-title-gold">юристів</span>
+          </h2>
+
+          <p class="section-description">
+            Досвідчені професіонали, готові захистити ваші права та інтереси
+          </p>
         </div>
-      </section>
-    <!-- Contact Section -->
-      <section class="contact" id="contact">
-        <div class="section-decoration section-decoration-4"></div>
-        <div class="section-decoration section-decoration-5"></div>
-        <div class="container">
-          <div class="section-header">
-            <div class="section-badge">КОНТАКТИ</div>
-            <h2 class="section-title">
-              <span class="section-title-white">Зв'яжіться </span>
-              <span class="section-title-gold">з нами</span>
-            </h2>
-            <p class="section-description">
-              Отримайте безкоштовну консультацію та професійну юридичну допомогу
-            </p>
-          </div>
-          <div class="contact-grid">
-            <div class="contact-form-wrapper">
-              <h3 class="contact-form-title">Запит на консультацію</h3>
-              <form id="contactForm" class="contact-form">
-                <div class="form-group">
-                  <label for="name">Ім'я *</label>
-                  <input type="text" id="name" name="name" required placeholder="Введіть ваше ім'я">
-                </div>
-                <div class="form-group">
-                  <label for="email">Email *</label>
-                  <input type="email" id="email" name="email" required placeholder="your@email.com">
-                </div>
-                <div class="form-group">
-                  <label for="phone">Телефон *</label>
-                  <input type="tel" id="phone" name="phone" required placeholder="+380 XX XXX XX XX">
-                </div>
-                <div class="form-group">
-                  <label for="message">Повідомлення *</label>
-                  <textarea id="message" name="message" required rows="4" placeholder="Опишіть вашу ситуацію..."></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary btn-lg btn-full">Відправити запит</button>
-              </form>
+
+        <div class="team-grid">
+          <div class="team-card">
+            <div class="team-avatar">
+              <img
+                alt="Марія Іваніщева"
+                class="team-photo"
+                src="./img/maria.JPG"
+              />
             </div>
-            <div class="contact-info">
-              <div class="contact-info-card">
-                <div class="contact-info-icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+            <div class="team-info">
+              <h3 class="team-name">Марія Іваніщева</h3>
+              <p class="team-position">Адвокат</p>
+
+              <div class="team-social">
+                <a class="social-link" href="#">
+                  <svg
+                    fill="none"
+                    height="20"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="20"
+                  >
+                    <rect
+                      height="20"
+                      rx="5"
+                      ry="5"
+                      width="20"
+                      x="2"
+                      y="2"
+                    ></rect>
                     <path
-                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                      d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                    ></path>
+                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
                   </svg>
-                </div>
-                <div>
-                  <h4>Телефон</h4>
-                  <a href="tel:+380636872293">+38 (063) 687 22 93</a>
-                </div>
+                </a>
+
+                <a class="social-link" href="#">
+                  <svg
+                    fill="none"
+                    height="20"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="20"
+                  >
+                    <path
+                      d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                    ></path>
+                  </svg>
+                </a>
+
+                <a class="social-link" href="#">
+                  <svg
+                    fill="none"
+                    height="20"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="20"
+                  >
+                    <path
+                      d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                    ></path>
+                    <rect height="12" width="4" x="2" y="9"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                  </svg>
+                </a>
               </div>
-              <div class="contact-info-card">
-                <div class="contact-info-icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                    <polyline points="22,6 12,13 2,6" />
+            </div>
+          </div>
+
+          <div class="team-card">
+            <div class="team-avatar">
+              <img alt="" class="team-photo" src="./img/lawyer2.JPG" />
+            </div>
+
+            <div class="team-info">
+              <h3 class="team-name">Василь Клименко</h3>
+              <p class="team-position">Військовий юрист</p>
+
+              <div class="team-social">
+                <a class="social-link" href="#">
+                  <svg
+                    fill="none"
+                    height="20"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="20"
+                  >
+                    <rect
+                      height="20"
+                      rx="5"
+                      ry="5"
+                      width="20"
+                      x="2"
+                      y="2"
+                    ></rect>
+                    <path
+                      d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                    ></path>
+                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
                   </svg>
-                </div>
-                <div>
-                  <h4>Email</h4>
-                  <a href="mailto:Advokat.ivanisheva@ukr.net">Advokat.ivanisheva@ukr.net</a>
-                </div>
-              </div>
-              <div class="contact-info-card">
-                <div class="contact-info-icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                    <circle cx="12" cy="10" r="3" />
+                </a>
+
+                <a class="social-link" href="#">
+                  <svg
+                    fill="none"
+                    height="20"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="20"
+                  >
+                    <path
+                      d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                    ></path>
                   </svg>
-                </div>
-                <div>
-                  <h4>Адреса</h4>
-                  <p>м. Івано-Франківськ, вул. Шевченко, 9</p>
-                  <p>76018</p>
-                </div>
-              </div>
-              <div class="contact-info-card">
-                <div class="contact-info-icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="12" cy="12" r="10" />
-                    <polyline points="12 6 12 12 16 14" />
+                </a>
+
+                <a class="social-link" href="#">
+                  <svg
+                    fill="none"
+                    height="20"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="20"
+                  >
+                    <path
+                      d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                    ></path>
+                    <rect height="12" width="4" x="2" y="9"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
                   </svg>
-                </div>
-                <div>
-                  <h4>Години роботи</h4>
-                  <p>Пн-Пт: 9:00 - 18:00</p>
-                  <p>Сб: 10:00 - 15:00</p>
-                  <p>Нд: Вихідний</p>
-                </div>
+                </a>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      
-      <!-- Footer -->
-      <footer class="footer">
-        <div class="container">
-          <div class="footer-grid">
-            <div class="footer-brand">
-              <div class="logo">
-                <span class="logo-pravo">Еволюція</span>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+      <div class="section-decoration section-decoration-4"></div>
+      <div class="section-decoration section-decoration-5"></div>
+
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">КОНТАКТИ</div>
+
+          <h2 class="section-title">
+            <span class="section-title-white">Зв'яжіться </span>
+            <span class="section-title-gold">з нами</span>
+          </h2>
+
+          <p class="section-description">
+            Отримайте безкоштовну консультацію та професійну юридичну допомогу
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-form-wrapper">
+            <h3 class="contact-form-title">Запит на консультацію</h3>
+
+            <form class="contact-form" id="contactForm">
+              <div class="form-group">
+                <label for="name">Ім'я *</label>
+                <input
+                  id="name"
+                  name="name"
+                  placeholder="Введіть ваше ім'я"
+                  required
+                  type="text"
+                />
               </div>
-              <p class="footer-description">
-                Ваш надійний партнер у вирішенні юридичних питань. Професійний захист ваших прав та інтересів.
-              </p>
-              <div class="footer-social">
-                <a href="#" class="social-link">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-                  </svg>
-                </a>
-                <a href="#" class="social-link">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-                  </svg>
-                </a>
-                <a href="#" class="social-link">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                    <rect x="2" y="9" width="4" height="12" />
-                    <circle cx="4" cy="4" r="2" />
-                  </svg>
-                </a>
+
+              <div class="form-group">
+                <label for="email">Email *</label>
+                <input
+                  id="email"
+                  name="email"
+                  placeholder="your@email.com"
+                  required
+                  type="email"
+                />
               </div>
-            </div>
-            <div class="footer-links">
-              <h3>Навігація</h3>
-              <ul>
-                <li><button onclick="scrollToSection('hero')">Головна</button></li>
-                <li><button onclick="scrollToSection('services')">Послуги</button></li>
-                <li><button onclick="scrollToSection('team')">Команда</button></li>
-                <li><button onclick="scrollToSection('contact')">Контакти</button></li>
-              </ul>
-            </div>
-            <div class="footer-links">
-              <h3>Наші послуги</h3>
-              <ul>
-                <li>Цивільне право</li>
-                <li>Кримінальне право</li>
-                <li>Сімейне право</li>
-                <li>Військове право</li>
-              </ul>
-            </div>
-            <div class="footer-contact">
-              <h3>Контакти</h3>
-              <div class="footer-contact-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+              <div class="form-group">
+                <label for="phone">Телефон *</label>
+                <input
+                  id="phone"
+                  name="phone"
+                  placeholder="+380 XX XXX XX XX"
+                  required
+                  type="tel"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="message">Повідомлення *</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Опишіть вашу ситуацію..."
+                  required
+                  rows="4"
+                ></textarea>
+              </div>
+
+              <button class="btn btn-primary btn-lg btn-full" type="submit">
+                Відправити запит
+              </button>
+            </form>
+          </div>
+
+          <div class="contact-info">
+            <div class="contact-info-card">
+              <div class="contact-info-icon">
+                <svg
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
                   <path
-                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                  ></path>
                 </svg>
-                <div>
-                  <a href="tel:+380636872293">+38 (063) 687 22 93</a>
-                </div>
               </div>
-              <div class="footer-contact-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                  <polyline points="22,6 12,13 2,6" />
-                </svg>
-                <a href="mailto:Advokat.ivanisheva@ukr.net">Advokat.ivanisheva@ukr.net</a>
+
+              <div>
+                <h4>Телефон</h4>
+                <a href="tel:+380636872293">+38 (063) 687 22 93</a>
               </div>
             </div>
-          </div>
-          <div class="footer-bottom">
-            <p>© 2025 АО Юридична компанія "Еволюція". Всі права захищені.</p>
-            <div class="footer-bottom-links">
-              <button>Політика конфіденційності</button>
-              <button>Умови використання</button>
+
+            <div class="contact-info-card">
+              <div class="contact-info-icon">
+                <svg
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  ></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+
+              <div>
+                <h4>Email</h4>
+                <a href="mailto:Advokat.ivanisheva@ukr.net"
+                  >Advokat.ivanisheva@ukr.net</a
+                >
+              </div>
+            </div>
+
+            <div class="contact-info-card">
+              <div class="contact-info-icon">
+                <svg
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <path
+                    d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                  ></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+
+              <div>
+                <h4>Адреса</h4>
+                <p>м. Івано-Франківськ, вул. Шевченко, 9</p>
+                <p>76018</p>
+              </div>
+            </div>
+
+            <div class="contact-info-card">
+              <div class="contact-info-icon">
+                <svg
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </div>
+
+              <div>
+                <h4>Години роботи</h4>
+                <p>Пн-Пт: 9:00 - 18:00</p>
+                <p>Сб: 10:00 - 15:00</p>
+                <p>Нд: Вихідний</p>
+              </div>
             </div>
           </div>
         </div>
-      </footer>
-      
-      <!-- Toast Notification -->
-      <div id="toast" class="toast"></div>
-      
-      <script src="script.js"></script>
-    
-</body>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="logo">
+              <span class="logo-pravo">Еволюція</span>
+            </div>
+
+            <p class="footer-description">
+              Ваш надійний партнер у вирішенні юридичних питань. Професійний
+              захист ваших прав та інтересів.
+            </p>
+          </div>
+
+          <div class="footer-links">
+            <h3>Навігація</h3>
+
+            <ul>
+              <li>
+                <button onclick="scrollToSection('hero')">Головна</button>
+              </li>
+              <li>
+                <button onclick="scrollToSection('business-support')">
+                  Послуги
+                </button>
+              </li>
+              <li>
+                <button onclick="scrollToSection('team')">Команда</button>
+              </li>
+              <li>
+                <button onclick="scrollToSection('contact')">Контакти</button>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-links">
+            <h3>Наші послуги</h3>
+
+            <ul>
+              <li>Цивільне право</li>
+              <li>Кримінальне право</li>
+              <li>Сімейне право</li>
+              <li>Військове право</li>
+            </ul>
+          </div>
+
+          <div class="footer-contact">
+            <h3>Контакти</h3>
+
+            <div class="footer-contact-item">
+              <svg
+                fill="none"
+                height="16"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="16"
+              >
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                ></path>
+              </svg>
+
+              <div>
+                <a href="tel:+380636872293">+38 (063) 687 22 93</a>
+              </div>
+            </div>
+
+            <div class="footer-contact-item">
+              <svg
+                fill="none"
+                height="16"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="16"
+              >
+                <path
+                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                ></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+
+              <a href="mailto:Advokat.ivanisheva@ukr.net"
+                >Advokat.ivanisheva@ukr.net</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2025 АО Юридична компанія "Еволюція". Всі права захищені.</p>
+
+          <div class="footer-bottom-links">
+            <button>Політика конфіденційності</button>
+            <button>Умови використання</button>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
+
+    <script src="script.js"></script>
+  </body>
 </html>

@@ -1,4 +1,3 @@
-
 /* =====================================================
    RESET AND BASE / БАЗОВІ СТИЛІ
    Скидання стандартних стилів, змінні, типографіка, загальний контейнер.
@@ -50,7 +49,7 @@ a {
 p {
   line-height: 1.7;
   letter-spacing: 0.3px;
-  color: rgba(255,255,255,0.75);
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .container {
@@ -90,15 +89,19 @@ p {
   font-size: 1.5rem;
   font-weight: 700;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  color: var(--gold);
+  text-decoration: none;
   font-family: "Playfair Display", serif;
 }
 
-.logo-pravo {
+.logo-svg {
+  height: 28px;
+  width: auto;
   color: var(--gold);
-}
-
-.logo-blago {
-  color: var(--text-white);
 }
 
 .nav-desktop {
@@ -655,14 +658,14 @@ section {
   border-radius: 16px;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.06);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .preview-card:hover {
   border-color: var(--gold);
   transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .preview-card p {
@@ -1056,7 +1059,9 @@ section {
   color: var(--gold);
   margin-top: 2px;
   flex-shrink: 0;
-  transition: transform 0.3s ease, color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
 }
 
 .footer-contact-item a {
@@ -1145,46 +1150,52 @@ section {
    Стилі для окремої сторінки бізнес-послуг.
    ===================================================== */
 
-.business-support {
+/* =====================================================
+   SERVICES HERO / HERO ДРУГОЇ СТОРІНКИ
+   ===================================================== */
+
+.services-hero {
   position: relative;
-  padding: 6rem 0;
-  background:
-    radial-gradient(circle at top left, rgba(199, 164, 106, 0.08), transparent 30%),
-    radial-gradient(circle at bottom right, rgba(199, 164, 106, 0.06), transparent 30%),
-    linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-darker) 100%);
-  color: var(--text-white);
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 80px;
+  display: flex;
+  align-items: center;
   overflow: hidden;
 }
 
-.business-support::before {
-  content: "";
+.services-hero-bg {
   position: absolute;
-  top: 120px;
-  left: -120px;
-  width: 320px;
-  height: 320px;
-  border-radius: 50%;
-  background: rgba(199, 164, 106, 0.06);
-  filter: blur(80px);
-  pointer-events: none;
+  inset: 0;
+  z-index: 0;
 }
 
-.business-support::after {
-  content: "";
-  position: absolute;
-  bottom: 80px;
-  right: -100px;
-  width: 280px;
-  height: 280px;
-  border-radius: 50%;
-  background: rgba(199, 164, 106, 0.05);
-  filter: blur(80px);
-  pointer-events: none;
+.services-hero .hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: heroZoom 20s ease-in-out infinite alternate;
 }
 
-.business-support .container {
+.services-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.82) 0%,
+    rgba(6, 50, 43, 0.86) 80%,
+    var(--bg-dark) 100%
+  );
+}
+
+.services-hero .container {
   position: relative;
   z-index: 2;
+}
+
+.services-hero-content {
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .section-heading {
@@ -1228,10 +1239,6 @@ section {
   font-size: 1.125rem;
   line-height: 1.8;
   color: #cfcfcf;
-}
-
-.service-block {
-  margin-bottom: 5rem;
 }
 
 .block-title {
@@ -1501,7 +1508,15 @@ section {
 .retail-card {
   padding: 1.6rem 1.25rem;
 }
+.retail-card .service-icon {
+  width: 40px;
+  height: 40px;
+}
 
+.retail-card .service-icon svg {
+  width: 20px;
+  height: 20px;
+}
 .retail-card h5 {
   margin: 0 0 0.75rem;
   font-size: 1.15rem;
