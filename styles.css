@@ -86,8 +86,6 @@ p {
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: 700;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -95,7 +93,6 @@ p {
   cursor: pointer;
   color: var(--gold);
   text-decoration: none;
-  font-family: "Playfair Display", serif;
 }
 
 .logo-svg {
@@ -103,7 +100,12 @@ p {
   width: auto;
   color: var(--gold);
 }
-
+.logo-text {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--gold);
+}
 .nav-desktop {
   display: none;
   align-items: center;
