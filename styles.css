@@ -57,6 +57,9 @@ p {
   margin: 0 auto;
   padding: 0 1rem;
 }
+section {
+  padding: 100px 0;
+}
 
 /* =====================================================
    HEADER / ШАПКА
@@ -424,10 +427,10 @@ p {
    Спільні стилі секцій, заголовків, описів і декоративних елементів.
    ===================================================== */
 
-section {
+/* section {
   position: relative;
   padding: 5rem 0;
-}
+} */
 
 .section-decoration {
   position: absolute;
@@ -1164,6 +1167,7 @@ section {
   display: flex;
   align-items: center;
   overflow: hidden;
+  margin-bottom: 40px;
 }
 
 .services-hero-bg {
@@ -1247,7 +1251,7 @@ section {
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 40px;
 }
 
 .block-title span {
@@ -1275,7 +1279,7 @@ section {
 .practice-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 1.5rem;
+  gap: 24px;
 }
 
 .practice-card,
@@ -1426,7 +1430,7 @@ section {
 .cooperation-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
+  gap: 24px;
 }
 
 .cooperation-card {
@@ -1504,7 +1508,7 @@ section {
 .retail-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.25rem;
+  gap: 24px;
 }
 
 .retail-card {
